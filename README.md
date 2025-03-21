@@ -8,7 +8,6 @@ A modern, minimal React + Tailwind starter template with essential features for 
 - 🎨 **Tailwind CSS 4** - Utility-first CSS framework
 - 📱 **Responsive Design** - Mobile-first approach
 - 🧩 **Component Structure** - Well-organized component hierarchy
-- 🌐 **i18n Support** - Internationalization with react-i18next
 - 🧭 **React Router** - Client-side routing
 - 🔍 **ESLint** - Code quality linting
 - 🔄 **Vite** - Fast development and building
