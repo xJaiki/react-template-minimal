@@ -5,32 +5,35 @@ import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import ErrorBoundary from './pages/ErrorBoundary';
 import ToastProvider from './components/ui/ToastProvider';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   return (
-    <Router>
-      <ToastProvider />
-      <ErrorBoundary>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Layout>
-                <Home />
-              </Layout>
-            }
-          />
-          <Route
-            path="*"
-            element={
-              <Layout>
-                <NotFound />
-              </Layout>
-            }
-          />
-        </Routes>
-      </ErrorBoundary>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <ToastProvider />
+        <ErrorBoundary>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Layout>
+                  <Home />
+                </Layout>
+              }
+            />
+            <Route
+              path="*"
+              element={
+                <Layout>
+                  <NotFound />
+                </Layout>
+              }
+            />
+          </Routes>
+        </ErrorBoundary>
+      </Router>
+    </ThemeProvider>
   );
 }
 
